@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+@plugin "daisyui" {
+   themes: light --default, dark, cupcake, corporate, synthwave, retro, cyberpunk, dim;
+};
+
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  --color-primary: #CAEB66;
+  --color-primary-content: #03373D;
+  --color-secondary: #03373D;
+}
+
+
+body {
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+@keyframes drive {
+  0% { left: -50px; }
+  100% { left: 100%; }
+}
+
+.animate-drive {
+  animation: drive 14s linear infinite;
+  position: absolute;
+}
+
+@keyframes shifting-box-1 {
+  0% { transform: translate(-20px, -20px) rotate(0deg) scale(1); }
+  25% { transform: translate(20px, -20px) rotate(90deg) scale(1.2); }
+  50% { transform: translate(20px, 20px) rotate(180deg) scale(1); }
+  75% { transform: translate(-20px, 20px) rotate(270deg) scale(1.2); }
+  100% { transform: translate(-20px, -20px) rotate(360deg) scale(1); }
+}
+
+@keyframes shifting-box-2 {
+  0% { transform: translate(20px, 20px) rotate(0deg) scale(1.2); }
+  25% { transform: translate(-20px, 20px) rotate(-90deg) scale(1); }
+  50% { transform: translate(-20px, -20px) rotate(-180deg) scale(1.2); }
+  75% { transform: translate(20px, -20px) rotate(-270deg) scale(1); }
+  100% { transform: translate(20px, 20px) rotate(-360deg) scale(1.2); }
+}
+
+.animate-shift-box-1 {
+  animation: shifting-box-1 2s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+}
+
+.animate-shift-box-2 {
+  animation: shifting-box-2 2s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+}
