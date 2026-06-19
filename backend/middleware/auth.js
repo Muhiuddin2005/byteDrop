@@ -57,3 +57,4 @@ const verifyRider = async (req, res, next) => {
 
 module.exports = { verifyFBToken, verifyAdmin, verifyRider };
 
+
