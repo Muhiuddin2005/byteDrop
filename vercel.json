@@ -1,0 +1,12 @@
+{
+  "experimentalServices": {
+    "frontend": {
+      "source": "frontend",
+      "target": "/"
+    },
+    "backend": {
+      "source": "backend",
+      "target": "/api"
+    }
+  }
+}
